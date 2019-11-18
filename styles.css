@@ -1,6 +1,7 @@
 body {
-  background-image: url("../images/avocado1.jpeg") no-repeat center;
+  background-image: url("../images/avocado1.jpeg");
   background-size: cover;
+  background-color: #cccccc;
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
