@@ -15,14 +15,9 @@ body, html {
   height: 100%;
 }
 .bg {
-  /* The image used */
-  background-image: ("avocado1.jpeg");
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
+background-image: ("..images/avocado1.jpeg");
+height: 100%;
+background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
