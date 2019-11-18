@@ -1,23 +1,42 @@
-body {
-  background-image: url("../images/avocado1.jpeg");
-  background-size: cover;
-  background-color: #cccccc;
-  width: 100vw;
-  height: 100vh;
-  box-sizing: border-box;
-  border: #ffffff 20px solid;
-  padding: 0;
-  margin: 0;
-  font-family: 'Helvetica'
-
-}
-body, html {
+html,
+body,
+header,
+.view {
   height: 100%;
 }
-.bg {
-background-image: ("..images/avocado1.jpeg");
-height: 100%;
-background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  background-color: #78909c !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #78909c !important;
+  }
+}
+
+h1 {
+  letter-spacing: 8px;
+}
+
+h5 {
+  letter-spacing: 3px;
+}
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 80px;
 }
