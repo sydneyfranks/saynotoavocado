@@ -16,7 +16,7 @@ body, html {
 }
 .bg {
   /* The image used */
-  background-image: url("../images/avocado1.jpeg");
+  background-image: ("avocado1.jpeg");
 
   /* Full height */
   height: 100%;
