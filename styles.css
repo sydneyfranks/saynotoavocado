@@ -14,3 +14,11 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#gradient-overlay {
+  background-image: "images/avocado1.jpeg");
+    height: 100%;
+    width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
