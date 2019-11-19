@@ -16,5 +16,13 @@ body, html {
   background-size: cover;
 }
 h1 {
-  font-size: 500em;
+  font-size: 2.5em;
+  align-items: center;
+
+}
+body, center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
