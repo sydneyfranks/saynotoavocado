@@ -28,6 +28,14 @@ div#n2-ss-15 .n2-ss-slide{
 	box-shadow: 0px 0px 10px 2px #7f7f7f;
 }
 
-a { color rgb:(0,0,0)
+body {
+  font-family: "Trebuchet MS", Arial, Verdana;
+  font-size: 30px;
+  color: white;
+}
 
+
+img:hover {
+    transform: rotate(180deg);
+    transition: 0.6s ease;
 }
