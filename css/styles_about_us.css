@@ -26,8 +26,8 @@ h1 {
 }
 
 p {
-      width: 50%;
-      margin: 10vh 10vw;
+      width: 90%;
+      margin: 5vh 5vw;
       font-size: 1em;
       color: white;
       text-align: left;
@@ -39,3 +39,7 @@ p {
           width: 100vw;
 
     }
+ a {
+   color: pink;
+
+ }
