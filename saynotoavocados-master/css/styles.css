@@ -1,0 +1,32 @@
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+div.box{
+  display: flex;
+  justify-content: space-around;
+}
+body {
+  background-image: url("img_tree.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+div#n2-ss-15 .n2-ss-slide{
+	border:10px solid white;
+	box-sizing:border-box!important;
+}
+
+div#n2-ss-15 .n2-ss-slide{
+	box-shadow: 0px 0px 10px 2px #7f7f7f;
+}
