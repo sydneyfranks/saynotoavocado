@@ -12,7 +12,10 @@ body {
   margin-right: auto;
   width: 50%;
 }
-
+div.box{
+  display: flex;
+  justify-content: space-around;
+}
 body {
   background-image: url("img_tree.gif");
   background-repeat: no-repeat;
