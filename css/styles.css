@@ -46,7 +46,7 @@ margin: 0 20px;
 transition: 0.6s ease;
 }
 h1:hover {
-font-size: 5.2em;
+font-size: 4.1em;
 transition: 0.6s ease;
 }
 
@@ -72,6 +72,7 @@ div#n2-ss-15 .n2-ss-slide{
 #avocadopic:hover {
     transform: rotate(180deg);
     transition: 0.6s ease;
+
 }
 
 #thumb:hover {
