@@ -12,10 +12,28 @@ body {
   margin-right: auto;
   width: 50%;
 }
+
+body {
+  background-image: url("img_tree.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Trebuchet MS", Arial, Verdana;
+  font-size: 30px;
+  color: white;
+  center: center-aligned;
+  opacity: 0;
+      transition: opacity 2s;
+      -webkit-transition: opacity 2s; /* Safari */
+
+}
+
+lead {
+  font-size: 30px;
+}
+
 div.box{
   display: flex;
   justify-content: space-around;
-
 }
 div.contrast h1{
   color: rgb(252, 255, 64);
@@ -27,35 +45,14 @@ margin: 0 20px;
 transition: 0.6s ease;
 }
 h1:hover {
-font-size: 5.2em;
+font-size: 4.1em;
 transition: 0.6s ease;
 }
 
-body {
-  background-image: url("img_tree.gif");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
 
 div#n2-ss-15 .n2-ss-slide{
 	border:10px solid white;
 	box-sizing:border-box!important;
-}
-
-div#n2-ss-15 .n2-ss-slide{
-	box-shadow: 0px 0px 10px 2px #7f7f7f;
-}
-
-body {
-  font-family: "Trebuchet MS", Arial, Verdana;
-  font-size: 30px;
-  color: white;
-}
-
-
-img:hover {
-    transform: rotate(180deg);
-    transition: 0.6s ease;
 }
 
 div.image-wraper {
@@ -64,6 +61,23 @@ div.image-wraper {
   justify-content: space-around;
 }
 
+/*took out lead class in p1*/
+
+div#n2-ss-15 .n2-ss-slide{
+	box-shadow: 0px 0px 10px 2px #7f7f7f;
+}
+
+
+#avocadopic:hover {
+    transform: rotate(180deg);
+    transition: 0.6s ease;
+
+}
+
+#thumb:hover {
+    transform: rotate(180deg);
+    transition: 0.6s ease;
+}
 div.popupboxes {
   display: flex;
   align-items: flex-end;
@@ -71,3 +85,4 @@ div.popupboxes {
   justify-content: space-around;
 
 }
+/* Start http://www.cursors-4u.com */ * {cursor: url(http://cur.cursors-4u.net/others/oth-7/oth705.cur), auto !important;} /* End http://www.cursors-4u.com */
