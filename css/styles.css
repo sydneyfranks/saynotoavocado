@@ -63,3 +63,11 @@ div.image-wraper {
   flex-direction: row;
   justify-content: space-around;
 }
+
+div.popupboxes {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
