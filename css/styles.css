@@ -17,6 +17,18 @@ body {
   background-image: url("img_tree.gif");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: "Trebuchet MS", Arial, Verdana;
+  font-size: 30px;
+  color: white;
+  center: center-aligned;
+  opacity: 0;
+      transition: opacity 2s;
+      -webkit-transition: opacity 2s; /* Safari */
+
+}
+
+lead {
+  font-size: 30px;
 }
 
 div#n2-ss-15 .n2-ss-slide{
@@ -28,14 +40,14 @@ div#n2-ss-15 .n2-ss-slide{
 	box-shadow: 0px 0px 10px 2px #7f7f7f;
 }
 
-body {
-  font-family: "Trebuchet MS", Arial, Verdana;
-  font-size: 30px;
-  color: white;
-}
 
-
-img:hover {
+#avocadopic:hover {
     transform: rotate(180deg);
     transition: 0.6s ease;
 }
+
+#thumb:hover {
+    transform: rotate(180deg);
+    transition: 0.6s ease;
+}
+/* Start http://www.cursors-4u.com */ * {cursor: url(http://cur.cursors-4u.net/others/oth-7/oth705.cur), auto !important;} /* End http://www.cursors-4u.com */
