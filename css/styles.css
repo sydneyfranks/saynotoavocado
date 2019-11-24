@@ -12,6 +12,24 @@ body {
   margin-right: auto;
   width: 50%;
 }
+div.box{
+  display: flex;
+  justify-content: space-around;
+
+}
+div.contrast h1{
+  color: rgb(252, 255, 64);
+
+}
+
+h1 {
+margin: 0 20px;
+transition: 0.6s ease;
+}
+h1:hover {
+font-size: 5.2em;
+transition: 0.6s ease;
+}
 
 body {
   background-image: url("img_tree.gif");
@@ -50,4 +68,13 @@ div#n2-ss-15 .n2-ss-slide{
     transform: rotate(180deg);
     transition: 0.6s ease;
 }
+<<<<<<< HEAD
 /* Start http://www.cursors-4u.com */ * {cursor: url(http://cur.cursors-4u.net/others/oth-7/oth705.cur), auto !important;} /* End http://www.cursors-4u.com */
+=======
+
+div.image-wraper {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+>>>>>>> 48d79abe01cf015ba99c8508f692f7b18aba1cb4

@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://www.tineye.com/search/b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac?page=1 -->
+<html lang="en" class="wf-opensans-n4-active wf-opensans-n6-active wf-opensans-n7-active wf-rokkitt-n4-active wf-rokkitt-n7-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>5 TinEye search results</title>
+
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="shortcut icon" href="https://www.tineye.com/query/b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac" type="image/x-icon">
+  <link rel="icon" href="https://www.tineye.com/query/b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac" type="image/x-icon">
+
+
+  
+  
+   
+  <script async="" src="./slideshow5_files/analytics.js"></script><script type="text/javascript" async="" src="./slideshow5_files/recaptcha__en.js"></script><script src="./slideshow5_files/webfont.js"></script>
+  <link rel="stylesheet" href="./slideshow5_files/css" media="all"><script>
+  WebFont.load({
+    google:{families:['Open+Sans:400,600,700:latin', 'Rokkitt:400,700:latin']},
+    timeout: 2000
+  });
+  </script>
+
+
+  <link rel="stylesheet" type="text/css" media="screen, projection" href="./slideshow5_files/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" media="screen, projection" href="./slideshow5_files/base.min.css">
+
+  <link rel="stylesheet" type="text/css" media="screen, projection" href="./slideshow5_files/forms.min.css">
+  <link rel="stylesheet" type="text/css" media="screen, projection" href="./slideshow5_files/search.min.css">
+  <link rel="stylesheet" type="text/css" media="screen, projection" href="./slideshow5_files/search_error.min.css">
+
+
+  <script src="./slideshow5_files/api.js"></script>
+  
+  
+   <script src="./slideshow5_files/jquery-3.4.1.min.js"></script>
+   <script src="./slideshow5_files/search.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      TinEye.nav();
+      TinEye.display_extension_link();
+      TinEye.drag_and_drop('/search');
+    });
+    $(document).bind("reached_search", null, function() { $("#file_submit").hide(); });
+  </script>
+
+
+   <script src="./slideshow5_files/jquery.simpletip-1.3.1.min.js"></script>
+   <script src="./slideshow5_files/underscore-min.js"></script>
+   <script src="./slideshow5_files/jquery.row-grid.js"></script>
+
+   <script src="./slideshow5_files/typeahead.bundle.min.js"></script>
+   <script src="./slideshow5_files/bootstrap.min.js"></script>
+   <script src="./slideshow5_files/overlay.min.js"></script>
+
+  <script>
+    var base_url = "/result/b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac";
+
+    var load_results = function (params, load_query_summary, record_history) {
+        var query_throbber = '<div id="query-throbber" class="loader"></div>';
+
+        $('footer').hide();
+
+        // Show the throbber
+        if (load_query_summary) {
+            $("#results-div").html(query_throbber);
+        } else {
+            $("#match-summary").html(query_throbber);
+        }
+
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LfgX5QUAAAAABsqcNLUZF9ZA8RDQhXbtvpizpWM', { action: 'search_page' }).then(function (token) {
+
+                if (!params.startsWith('?'))
+                    params = '?' + params;
+
+                // Add google token to the url
+                params ? req_url = base_url + params + "&token=" + token : req_url = base_url + "?token=" + token;
+
+                if (load_query_summary)
+                    req_url = req_url + '&query_summary=1';
+
+                $.ajax(req_url,
+                    {
+                        async: true,
+                        method: 'GET',
+                        timeout: 45000,
+                        success: function (data, status, xhr) {
+                            if (record_history) {
+                                history.pushState({ params: params }, 'Results', '/search/b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac' + params);
+                            }
+                            load_query_summary ? $("#results-div").html(data) : $("#match-summary").replaceWith(data);
+                            $("footer").show();
+                        },
+                        error: function (jqXhr, textStatus, errorMessage) {
+                            // There was a problem with the request
+                            $("#results-div").hide();
+
+                            if (textStatus === 'timeout' || jqXhr.status === 503) {
+                                $("#timeout-error-container").show();
+                                $('footer').show();
+                            } else if (jqXhr.status === 400 || jqXhr.status === 403 || jqXhr.status == 410) {
+                                $("#query-summary").hide();
+                                $("#results-div").html(jqXhr.responseText);
+                                $("#results-div").css("min-height", "");
+                                $("#results-div").show();
+                                $('footer').show();
+                            } 
+                            else if (jqXhr.status === 302) {
+                              window.location.replace("https://www.tineye.com/whitelist?query=b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac")
+                            }             
+                            else {
+                                $("#error-container").show();
+                                $("footer").show();
+                            }
+                        },
+                        complete: function () {
+                            // overlay has been replaced by ajax, reset the id
+                            open_overlay=null;
+                        }
+                    });
+            },
+            function() {
+              $("#results-div").hide();
+              $("#capcha-error-container").show();
+              $("footer").show();
+            });
+        });
+    };
+
+    // Hide the footer and results first so the page doesnt snap
+    var load_results_reset_page = function (params, load_query_summary) {
+        $("#results-div").hide();
+        $("#results-div").animate({ scrollTop: 0 }, "fast");
+        load_results(params, load_query_summary, true);
+        $("#results-div").show();
+    }
+
+    window.onpopstate = function (event) {
+        load_results(event.state.params, false, false);
+    };
+
+    $(document).ready(function () {
+        $("footer").hide();
+        $("#results-div").css("min-height", window.innerHeight - 400);
+        $("#results-div").show();
+        load_results("?page=1", true, true);
+    });
+  </script>
+
+<script id="_carbonads_projs" type="text/javascript" src="./slideshow5_files/CE7D4KQE.json"></script><script id="_carbonads_projs" type="text/javascript" src="./slideshow5_files/CE7D4KQE.json"></script></head>
+<body>
+  
+  
+  
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1><a href="https://www.tineye.com/">TinEye</a></h1>
+
+        <div class="hidden-sm hidden-xs left-nav">
+          <a id="search" href="https://www.tineye.com/" class="active">Search</a>
+          <a id="technology" href="https://www.tineye.com/technology">Technology</a>
+          <a id="products" href="https://www.tineye.com/products">Products</a>
+          <a id="about" href="https://www.tineye.com/about">About</a>
+        </div>
+
+        
+        <div class="visible-sm-block visible-xs-block mobile-menu">
+          <a class="hamburger" href="https://www.tineye.com/search/b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac?page=1"></a>
+          <div id="mobile-menu">
+            <div class="menu-arrow"></div>
+            <ul>
+              <li><a href="https://www.tineye.com/" class="active">Search</a></li>
+              <li><a href="https://www.tineye.com/technology">Technology</a></li>
+              <li><a href="https://www.tineye.com/products">Products</a></li>
+              <li><a href="https://www.tineye.com/about">About</a></li>
+              <li><a href="https://www.tineye.com/service_select">Log in</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="visible-md-block visible-lg-block right-nav">
+          <a href="https://www.tineye.com/service_select" class="">Log in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+  
+  <div class="search-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+          <div class="search">
+            <div class="forms">
+              <form id="upload_form" method="post" action="https://www.tineye.com/search" enctype="multipart/form-data">
+                <label for="upload_box" id="upload-button"></label>
+                <input id="upload_box" type="file" name="image" onchange="TinEye.display_throbber(); this.form.submit()" title="Upload an image" aria-label="Upload an image to search for">
+                <input style="display: none;" type="submit" id="file_submit" value="Upload Image" class="submit">
+              </form>
+              <form id="url_form" method="post" action="https://www.tineye.com/search" onsubmit="TinEye.display_throbber();">
+                <div class="input-container">
+                  <input class="image-url" id="url_box" name="url" maxlength="100000" placeholder="Upload, paste or enter Image URL" aria-label="Enter a link to an image to search for" onfocus="this.form.search_button.disabled=false" type="text">
+                </div>
+                <input class="submit-button" id="url_submit" name="search_button" value="" type="submit" disabled="disabled">
+                <img id="throbber" src="./slideshow5_files/throbber.gif" width="22" height="22" alt="Loading...">
+              </form>
+            </div>
+
+            <div id="drag_and_drop" style="display: none">
+              <form id="upload_form_drag" method="post" action="https://www.tineye.com/search" enctype="multipart/form-data">
+                <input type="file" id="upload_box_drag" name="image">
+                <input type="submit" id="file_submit">
+              </form>
+              <form id="url_form_drag" method="post" action="https://www.tineye.com/search">
+                <input type="text" id="url_box_drag" name="url" maxlength="100000">
+                <input type="submit" id="url_submit" name="search_button">
+              </form>
+            </div>
+            <script>
+              $(document).trigger('reached_search', null);
+              if (!window.operamini) {
+                $('#url_submit').attr('disabled','disabled');
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="upload_overlay">
+    <div id="upload_overlay_message" style="display: none">
+      <img src="./slideshow5_files/large_throbber.gif" width="32" height="32" alt="Uploading your image..."><br>
+      Uploading your image...
+    </div>
+  </div>
+
+
+  <div id="results-div" style="min-height: 421px;">
+
+
+  <script>
+    $(document).ready(function() {
+        TinEye.get_domain_counts('4a45932cf844cb75ca4a79a08828fccfd84c198d', '', '', 'score', 'desc');
+        $('.sort.dropdown a').on('click', function() {
+          var sort = $(this).prop('id');
+          var last_index = sort.lastIndexOf('_');
+          TinEye.change_sort_filter('', '', sort.substring(0, last_index), sort.substring(last_index + 1));
+        });
+        TinEye.get_image_count(true, 'image_count');
+        $('title').html('5 TinEye search results');
+        
+    });
+  </script>
+
+
+
+
+  <div class="query-summary">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="query-thumb">
+            <img src="./slideshow5_files/b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac" alt="Query Image" class="img-responsive">
+          </div>
+
+          <div class="search-details">
+            <h2><span id="result_count">5</span> results</h2>
+            <h3>Searched over <a href="https://www.tineye.com/faq#count"><span id="image_count">38.6</span> billion images</a> in 4.7 seconds
+              for: <strong>slideshow2.jpg</strong>
+            </h3>
+            <p class="commercial-info">Using TinEye is private. <a href="https://www.tineye.com/faq#uploading">We do not save your search images</a>.
+              TinEye is free to use for non-commercial purposes. For business solutions, <a href="https://www.tineye.com/technology">learn about our technology</a>.</p>
+
+            <div class="collection-set">
+              <ul>
+              </ul>
+            </div>
+          </div>
+
+          <div class="robot hidden-sm hidden-xs"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+
+  <script>
+    $(document).ready(function() {
+        TinEye.get_domain_counts('4a45932cf844cb75ca4a79a08828fccfd84c198d', '', '', 'score', 'desc');
+        $('.sort.dropdown a').on('click', function() {
+          var sort = $(this).prop('id');
+          var last_index = sort.lastIndexOf('_');
+          TinEye.change_sort_filter('', '', sort.substring(0, last_index), sort.substring(last_index + 1));
+        });
+        TinEye.get_image_count(true, 'image_count');
+        $('title').html('5 TinEye search results');
+        
+    });
+  </script>
+
+
+
+
+  <div id="match-summary" class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="sorting-row row">
+          <div class="col-sm-12">
+            <div class="sort dropdown">
+              
+              <button type="button" data-toggle="dropdown">
+ Sort by best match<span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a id="score_desc" class="active">Best match</a></li>
+                <li><a id="score_asc">Most changed</a></li>
+                <li><a id="size_desc">Biggest image</a></li>
+                <li><a id="crawl_date_desc">Newest</a></li>
+                <li><a id="crawl_date_asc">Oldest</a></li>
+              </ul>
+            </div>
+
+            <div class="domain_filter">
+              <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="typeahead field tt-hint" type="text" autocomplete="off" value="" readonly="" spellcheck="false" tabindex="-1" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"><input class="typeahead field tt-input" placeholder="Filter by domain/collection" name="domain" type="text" autocomplete="off" value="" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-domain_list"></div></div></span>
+              <span class="clear-collections">✕</span>
+            </div>
+
+            <div class="paging">
+            </div>
+          </div>
+        </div>
+
+        <div class="results row">
+
+          <div class="matches col-sm-12">
+
+                
+                      
+  
+  
+
+
+    <div class="row match-row">
+
+    <div class="col-sm-12">
+      
+      <div id="compare-0" class="slide-hide">
+        <div class="compare-popup">
+          <h4>Compare match</h4>
+          <a href="javascript:TinEye.close_overlay(&#39;0&#39;);" class="close-overlay">Close</a>
+          <div class="overlay-detail">
+            <div id="overlay-0"></div>
+            <p id="match-info-0" class="match-info">JPEG, 1500x1000, 213.1 KB</p>
+            <p id="query-info-0" class="query-info hidden">JPEG, 1000x500, 95.8 KB</p>
+          </div>
+          <div class="toggle">
+            <div id="your_image_label-0" class="nonactive yourimage"><h4><a class="toggle_images-0">Your image</a></h4></div>
+            <div class="switch"><input value="Compare" class="btn primary-btn toggle_images-0" type="button"></div>
+            <div id="matching_image_label-0" class="active-right imagematch"><h4><a class="toggle_images-0">Image match</a></h4></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-xs-3 col-sm-3 match-thumb">
+      
+      <a href="javascript:TinEye.toggleDisclosureWidget(&#39;compare-0&#39;); TinEye.overlay(&#39;/overlay/b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac/ae5a74f438deabd52709c0303c409cea181e7cf79b066f7e0427dcc140574ef5?m21=-0.00175136&amp;m22=1.2283&amp;m23=-66.4066&amp;m11=1.2283&amp;m13=18.5905&amp;m12=0.00175136&#39;, &#39;0&#39;);">
+        <img src="./slideshow5_files/ae5a74f438deabd52709c0303c409cea181e7cf79b066f7e0427dcc140574ef5" id="ae5a74f438deabd52709c0303c409cea181e7cf79b066f7e0427dcc140574ef5" alt="Result image" class="img-responsive"><span>Compare</span></a>
+    </div>
+
+    
+    <div class="col-xs-9 col-sm-9 match-details">
+      <div class="match">
+        
+        <h4 title="veja.abril.com.br">
+          <a href="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" title="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;backlink&#39;);">veja.abril.com.br</a>
+        </h4>
+
+      
+
+            
+           <p>
+  <a href="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" title="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;backlink&#39;);">
+gastronomia/muito-alem-do-guacamole-2/</a>
+  <span class="crawl-date">- First found on Jul 05, 2019</span>
+</p>
+
+        
+
+
+        <p class="hidden-xs image-link">Filename: <a href="https://abrilveja.files.wordpress.com/2019/03/avocado-mexico-1.jpg.jpg?quality=70&amp;amp%3Bstrip=info&amp;amp%3Bresize=680%2C453%20680w%2C%20https%3A//abrilveja.files.wordpress.com/2019/03/avocado-mexico-1.jpg.jpg?quality=70&amp;amp%3Bstrip=all&amp;amp%3Bresize=420%2C280%20420w%2C%20https%3A//abrilveja.files.wordpress.com/2019/03/avocado-mexico-1.jpg.jpg?quality=70&amp;amp%3Bstrip=all&amp;amp%3Bresize=360%2C240%20360w%2C" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;image&#39;);" title="avocado-mexico-1.jpg.jpg">avocado-mexico-1.jpg.jpg</a> <span>(1500 x 1000, 213.1 KB)</span></p>
+        <p class="short-image-link visible-xs"><a href="https://abrilveja.files.wordpress.com/2019/03/avocado-mexico-1.jpg.jpg?quality=70&amp;amp%3Bstrip=info&amp;amp%3Bresize=680%2C453%20680w%2C%20https%3A//abrilveja.files.wordpress.com/2019/03/avocado-mexico-1.jpg.jpg?quality=70&amp;amp%3Bstrip=all&amp;amp%3Bresize=420%2C280%20420w%2C%20https%3A//abrilveja.files.wordpress.com/2019/03/avocado-mexico-1.jpg.jpg?quality=70&amp;amp%3Bstrip=all&amp;amp%3Bresize=360%2C240%20360w%2C" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;image&#39;);" title="avocado-mexico-1.jpg.jpg">view image</a> <span>(1500 x 1000, 213.1 KB)</span></p>
+      </div>
+    </div>
+
+
+  </div>
+
+                  
+                      
+  
+  
+
+
+    <div class="row match-row">
+
+    <div class="col-sm-12">
+      
+      <div id="compare-1" class="slide-show">
+        <div class="compare-popup">
+          <h4>Compare match</h4>
+          <a href="javascript:TinEye.close_overlay(&#39;1&#39;);" class="close-overlay">Close</a>
+          <div class="overlay-detail">
+            <div id="overlay-1"><div class="overlay-container"><div class="images overlay" id="overlay_image-1" style="width: 400px; height: 247px; margin: 10px auto; background-position: -400px center; background-size: 800px 247px; background-image: url(&quot;/overlay/b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac/f4ae46381807b287a28c05d874408b8f59c15135422721772e9e5c3d0ee314c0?m21=-0.0016184300000000001&amp;m22=1.22837&amp;m23=-66.4654&amp;m11=1.22837&amp;m13=18.5959&amp;m12=0.0016184300000000001&quot;);"><div id="matching_image-1" class="active"></div></div><div id="your_image-1"></div></div></div>
+            <p id="match-info-1" class="match-info">JPEG, 1500x1000, 1.0 MB</p>
+            <p id="query-info-1" class="query-info hidden">JPEG, 1000x500, 95.8 KB</p>
+          </div>
+          <div class="toggle">
+            <div id="your_image_label-1" class="nonactive yourimage"><h4><a class="toggle_images-1">Your image</a></h4></div>
+            <div class="switch"><input value="Compare" class="btn primary-btn toggle_images-1" type="button"></div>
+            <div id="matching_image_label-1" class="active-right imagematch"><h4><a class="toggle_images-1">Image match</a></h4></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-xs-3 col-sm-3 match-thumb">
+      
+      <a href="javascript:TinEye.toggleDisclosureWidget(&#39;compare-1&#39;); TinEye.overlay(&#39;/overlay/b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac/f4ae46381807b287a28c05d874408b8f59c15135422721772e9e5c3d0ee314c0?m21=-0.0016184300000000001&amp;m22=1.22837&amp;m23=-66.4654&amp;m11=1.22837&amp;m13=18.5959&amp;m12=0.0016184300000000001&#39;, &#39;1&#39;);">
+        <img src="./slideshow5_files/f4ae46381807b287a28c05d874408b8f59c15135422721772e9e5c3d0ee314c0" id="f4ae46381807b287a28c05d874408b8f59c15135422721772e9e5c3d0ee314c0" alt="Result image" class="img-responsive"><span>Compare</span></a>
+    </div>
+
+    
+    <div class="col-xs-9 col-sm-9 match-details">
+      <div class="match">
+        
+        <h4 title="veja.abril.com.br">
+          <a href="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" title="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;backlink&#39;);">veja.abril.com.br</a>
+        </h4>
+
+      
+
+            
+           <p>
+  <a href="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" title="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;backlink&#39;);">
+gastronomia/muito-alem-do-guacamole-2/</a>
+  <span class="crawl-date">- First found on Jul 05, 2019</span>
+</p>
+
+        
+
+
+           <p>
+  <a href="https://veja.abril.com.br/gastronomia/" title="https://veja.abril.com.br/gastronomia/" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;backlink&#39;);">
+gastronomia/</a>
+  <span class="crawl-date">- First found on Mar 21, 2019</span>
+</p>
+
+        
+
+
+        <p class="hidden-xs image-link">Filename: <a href="https://abrilveja.files.wordpress.com/2019/03/avocado-mexico-1.jpg.jpg" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;image&#39;);" title="avocado-mexico-1.jpg.jpg">avocado-mexico-1.jpg.jpg</a> <span>(1500 x 1000, 1.0 MB)</span></p>
+        <p class="short-image-link visible-xs"><a href="https://abrilveja.files.wordpress.com/2019/03/avocado-mexico-1.jpg.jpg" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;image&#39;);" title="avocado-mexico-1.jpg.jpg">view image</a> <span>(1500 x 1000, 1.0 MB)</span></p>
+      </div>
+    </div>
+
+
+  </div>
+
+                  
+                      
+  
+  
+
+
+    <div class="row match-row">
+
+    <div class="col-sm-12">
+      
+      <div id="compare-2" class="overlay slide-hide">
+        <div class="compare-popup">
+          <h4>Compare match</h4>
+          <a href="javascript:TinEye.close_overlay(&#39;2&#39;);" class="close-overlay">Close</a>
+          <div class="overlay-detail">
+            <div id="overlay-2"></div>
+            <p id="match-info-2" class="match-info">JPEG, 680x453, 59.0 KB</p>
+            <p id="query-info-2" class="query-info hidden">JPEG, 1000x500, 95.8 KB</p>
+          </div>
+          <div class="toggle">
+            <div id="your_image_label-2" class="nonactive yourimage"><h4><a class="toggle_images-2">Your image</a></h4></div>
+            <div class="switch"><input value="Compare" class="btn primary-btn toggle_images-2" type="button"></div>
+            <div id="matching_image_label-2" class="active-right imagematch"><h4><a class="toggle_images-2">Image match</a></h4></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-xs-3 col-sm-3 match-thumb">
+      
+      <a href="javascript:TinEye.toggleDisclosureWidget(&#39;compare-2&#39;); TinEye.overlay(&#39;/overlay/b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac/ecb62ab481ae3136cb27ae2d6b2f0afb10ecad8216a86072fccb6257cc28de7b?m21=-0.00191273&amp;m22=1.22816&amp;m23=-66.3739&amp;m11=1.22816&amp;m13=18.5453&amp;m12=0.00191273&#39;, &#39;2&#39;);">
+        <img src="./slideshow5_files/ecb62ab481ae3136cb27ae2d6b2f0afb10ecad8216a86072fccb6257cc28de7b" id="ecb62ab481ae3136cb27ae2d6b2f0afb10ecad8216a86072fccb6257cc28de7b" alt="Result image" class="img-responsive"><span>Compare</span></a>
+    </div>
+
+    
+    <div class="col-xs-9 col-sm-9 match-details">
+      <div class="match">
+        
+        <h4 title="veja.abril.com.br">
+          <a href="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" title="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;backlink&#39;);">veja.abril.com.br</a>
+        </h4>
+
+      
+
+            
+           <p>
+  <a href="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" title="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;backlink&#39;);">
+gastronomia/muito-alem-do-guacamole-2/</a>
+  <span class="crawl-date">- First found on Jul 05, 2019</span>
+</p>
+
+        
+
+
+        <p class="hidden-xs image-link">Filename: <a href="https://abrilveja.files.wordpress.com/2019/03/avocado-mexico-1.jpg.jpg?quality=70&amp;strip=info&amp;w=680&amp;h=453&amp;crop=1" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;image&#39;);" title="avocado-mexico-1.jpg.jpg">avocado-mexico-1.jpg.jpg</a> <span>(680 x 453, 59.0 KB)</span></p>
+        <p class="short-image-link visible-xs"><a href="https://abrilveja.files.wordpress.com/2019/03/avocado-mexico-1.jpg.jpg?quality=70&amp;strip=info&amp;w=680&amp;h=453&amp;crop=1" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;image&#39;);" title="avocado-mexico-1.jpg.jpg">view image</a> <span>(680 x 453, 59.0 KB)</span></p>
+      </div>
+    </div>
+
+
+  </div>
+
+                  
+                      
+  
+  
+
+
+    <div class="row match-row">
+
+    <div class="col-sm-12">
+      
+      <div id="compare-3" class="overlay slide-hide">
+        <div class="compare-popup">
+          <h4>Compare match</h4>
+          <a href="javascript:TinEye.close_overlay(&#39;3&#39;);" class="close-overlay">Close</a>
+          <div class="overlay-detail">
+            <div id="overlay-3"></div>
+            <p id="match-info-3" class="match-info">JPEG, 1024x683, 113.0 KB</p>
+            <p id="query-info-3" class="query-info hidden">JPEG, 1000x500, 95.8 KB</p>
+          </div>
+          <div class="toggle">
+            <div id="your_image_label-3" class="nonactive yourimage"><h4><a class="toggle_images-3">Your image</a></h4></div>
+            <div class="switch"><input value="Compare" class="btn primary-btn toggle_images-3" type="button"></div>
+            <div id="matching_image_label-3" class="active-right imagematch"><h4><a class="toggle_images-3">Image match</a></h4></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-xs-3 col-sm-3 match-thumb">
+      
+      <a href="javascript:TinEye.toggleDisclosureWidget(&#39;compare-3&#39;); TinEye.overlay(&#39;/overlay/b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac/d1fb8fc94e4b58a2aa4574aad94d06013c92ccdb1070d092466ee0bb05927c8f?m21=-0.00231296&amp;m22=1.22803&amp;m23=-66.3561&amp;m11=1.22803&amp;m13=18.5045&amp;m12=0.00231296&#39;, &#39;3&#39;);">
+        <img src="./slideshow5_files/d1fb8fc94e4b58a2aa4574aad94d06013c92ccdb1070d092466ee0bb05927c8f" id="d1fb8fc94e4b58a2aa4574aad94d06013c92ccdb1070d092466ee0bb05927c8f" alt="Result image" class="img-responsive"><span>Compare</span></a>
+    </div>
+
+    
+    <div class="col-xs-9 col-sm-9 match-details">
+      <div class="match">
+        
+        <h4 title="veja.abril.com.br">
+          <a href="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" title="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;backlink&#39;);">veja.abril.com.br</a>
+        </h4>
+
+      
+
+            
+           <p>
+  <a href="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" title="https://veja.abril.com.br/gastronomia/muito-alem-do-guacamole-2/" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;backlink&#39;);">
+gastronomia/muito-alem-do-guacamole-2/</a>
+  <span class="crawl-date">- First found on Jul 05, 2019</span>
+</p>
+
+        
+
+
+        <p class="hidden-xs image-link">Filename: <a href="https://abrilveja.files.wordpress.com/2019/03/avocado-mexico-1.jpg.jpg?quality=70&amp;strip=info&amp;w=1024" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;image&#39;);" title="avocado-mexico-1.jpg.jpg">avocado-mexico-1.jpg.jpg</a> <span>(1024 x 683, 113.0 KB)</span></p>
+        <p class="short-image-link visible-xs"><a href="https://abrilveja.files.wordpress.com/2019/03/avocado-mexico-1.jpg.jpg?quality=70&amp;strip=info&amp;w=1024" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;image&#39;);" title="avocado-mexico-1.jpg.jpg">view image</a> <span>(1024 x 683, 113.0 KB)</span></p>
+      </div>
+    </div>
+
+
+  </div>
+
+                  
+                      
+  
+  
+
+
+    <div class="row match-row">
+
+    <div class="col-sm-12">
+      
+      <div id="compare-4" class="overlay slide-hide">
+        <div class="compare-popup">
+          <h4>Compare match</h4>
+          <a href="javascript:TinEye.close_overlay(&#39;4&#39;);" class="close-overlay">Close</a>
+          <div class="overlay-detail">
+            <div id="overlay-4"></div>
+            <p id="match-info-4" class="match-info">JPEG, 300x180, 16.9 KB</p>
+            <p id="query-info-4" class="query-info hidden">JPEG, 1000x500, 95.8 KB</p>
+          </div>
+          <div class="toggle">
+            <div id="your_image_label-4" class="nonactive yourimage"><h4><a class="toggle_images-4">Your image</a></h4></div>
+            <div class="switch"><input value="Compare" class="btn primary-btn toggle_images-4" type="button"></div>
+            <div id="matching_image_label-4" class="active-right imagematch"><h4><a class="toggle_images-4">Image match</a></h4></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-xs-3 col-sm-3 match-thumb">
+      
+      <a href="javascript:TinEye.toggleDisclosureWidget(&#39;compare-4&#39;); TinEye.overlay(&#39;/overlay/b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac/c64b754caeae5c9bf0906b4a1d534b6e57043188842299209a7d9692cfcc2217?m21=-0.0021376900000000002&amp;m22=2.04908&amp;m23=-66.4421&amp;m11=2.04908&amp;m13=-11.6638&amp;m12=0.0021376900000000002&#39;, &#39;4&#39;);">
+        <img src="./slideshow5_files/c64b754caeae5c9bf0906b4a1d534b6e57043188842299209a7d9692cfcc2217" id="c64b754caeae5c9bf0906b4a1d534b6e57043188842299209a7d9692cfcc2217" alt="Result image" class="img-responsive"><span>Compare</span></a>
+    </div>
+
+    
+    <div class="col-xs-9 col-sm-9 match-details">
+      <div class="match">
+        
+        <h4 title="www.theguardian.com">
+          <a href="https://www.theguardian.com/cities/2017/may/18/avocado-police-tancitaro-mexico-law-drug-cartels" title="https://www.theguardian.com/cities/2017/may/18/avocado-police-tancitaro-mexico-law-drug-cartels" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;backlink&#39;);">theguardian.com</a>
+        </h4>
+
+      
+
+            
+           <p>
+  <a href="https://www.theguardian.com/cities/2017/may/18/avocado-police-tancitaro-mexico-law-drug-cartels" title="https://www.theguardian.com/cities/2017/may/18/avocado-police-tancitaro-mexico-law-drug-cartels" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;backlink&#39;);">
+cities/2017/may/18/avocado-police-tan...</a>
+  <span class="crawl-date">- First found on Jan 26, 2018</span>
+</p>
+
+        
+
+
+        <p class="hidden-xs image-link">Filename: <a href="https://i.guim.co.uk/img/media/acb18bb394a33690fac446c7bf4578e88ee42ec7/0_0_4896_2938/master/4896.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=c2db6acde72fe55cdf86f401cce856e5" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;image&#39;);" title="4896.jpg">4896.jpg</a> <span>(300 x 180, 16.9 KB)</span></p>
+        <p class="short-image-link visible-xs"><a href="https://i.guim.co.uk/img/media/acb18bb394a33690fac446c7bf4578e88ee42ec7/0_0_4896_2938/master/4896.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=c2db6acde72fe55cdf86f401cce856e5" onmousedown="return TinEye.exit(this.href, &#39;&#39;, &#39;b1783978f3a4e3bed49a4375e0a9f9a1be8b1cac&#39;, &#39;image&#39;);" title="4896.jpg">view image</a> <span>(300 x 180, 16.9 KB)</span></p>
+      </div>
+    </div>
+
+
+  </div>
+
+                  
+          </div>
+
+        </div>
+      </div>
+
+      <div class="sidebar col-sm-12 col-md-4 ">
+        <script async="" src="./slideshow5_files/carbon.js" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="https://srv.carbonads.net/ads/click/x/GTND42QUCE7DC2QMFT74YKQMCABDT27MFTYI6Z3JCWSIVK3MCWBI423KC6BI523JF67IKK3EHJNCLSIZ?segment=placement:wwwtineyecom;" class="carbon-img" target="_blank" rel="noopener sponsored"><img src="./slideshow5_files/1573063681-FA19-Discovery-Bnr3-UK-250x200.jpg" alt="ads via Carbon" border="0" style="max-width: 130px;"></a><a href="https://srv.carbonads.net/ads/click/x/GTND42QUCE7DC2QMFT74YKQMCABDT27MFTYI6Z3JCWSIVK3MCWBI423KC6BI523JF67IKK3EHJNCLSIZ?segment=placement:wwwtineyecom;" class="carbon-text" target="_blank" rel="noopener sponsored">Say it With Adobe Stock - Find the perfect stock asset for your next project.</a></span><a href="http://carbonads.net/?utm_source=wwwtineyecom&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener sponsored">ads via Carbon</a><img src="./slideshow5_files/saved_resource" border="0" height="1" width="1" alt="ads via Carbon" style="display: none;"></span></div>
+      </div>
+
+      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+  <div id="error-container" class="error-container results-error" style="display:none;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-offset-1 col-md-7 col-lg-offset-2 col-lg-6 error-description">
+          <h2>Whoops, we are sorry.</h2>
+          <p>There seems to be a connection problem between us. Please try again.</p>
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-3">
+          <div class="error-robot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="capcha-error-container" class="error-container results-error" style="display:none;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-offset-1 col-md-7 col-lg-offset-2 col-lg-6 error-description">
+          <h2>Whoops, we are sorry.</h2>
+          <p>Hmmm. We aren’t able to connect to Google reCAPTCHA. Please enable access to Google reCAPTCHA and try your search again.</p>
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-3">
+          <div class="error-robot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="timeout-error-container" class="error-container results-error" style="display:none;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-offset-1 col-md-7 col-lg-offset-2 col-lg-6 error-description">
+          <h2>Whoops, we are sorry.</h2>
+          <p>TinEye can’t keep up with its popularity right now, please try your search again later.</p>
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-3">
+          <div class="error-robot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <noscript>
+  <div id="javascript-error-container" class="error-container results-error">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-offset-1 col-md-7 col-lg-offset-2 col-lg-6 error-description">
+          <h2>Whoops, we are sorry.</h2>
+          <p>TinEye requires JavaScript to run correctly, please enable JavaScript.</p>
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-3">
+          <div class="error-robot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </noscript>
+
+
+
+  
+  <footer style="">
+    <div class="container">
+      <div class="row info">
+        <div class="col-sm-12 col-md-4 company-description">
+          <h1><a href="https://www.tineye.com/">TinEye</a></h1>
+          <p class="md">TinEye is an <a href="https://www.tineye.com/technology">image search and recognition company</a>.
+            We are experts in computer vision, pattern recognition, neural networks, and machine learning.</p>
+          <p class="md">Our mission is to make your images searchable.
+            <a href="https://www.tineye.com/how">How to use TinEye</a></p>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2 search-menu">
+          <div>
+            <h5>TINEYE.COM</h5>
+            <a href="https://www.tineye.com/">Image search</a>
+            <a href="https://www.tineye.com/how">How to use TinEye</a>
+            <a href="https://www.tineye.com/extensions">Browser extensions</a>
+            <a href="https://www.tineye.com/faq">FAQs</a>
+            <a href="https://www.tineye.com/register">Register</a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2 products-menu">
+          <div>
+            <h5>PRODUCTS</h5>
+            <a href="https://www.tineye.com/products">Overview</a>
+            <a href="https://services.tineye.com/MatchEngine">MatchEngine</a>
+            <a href="https://services.tineye.com/MobileEngine">MobileEngine</a>
+            <a href="https://services.tineye.com/MulticolorEngine">MulticolorEngine</a>
+            <a href="https://services.tineye.com/TinEyeAlerts">TinEye Alerts</a>
+            <a href="https://services.tineye.com/TinEyeAPI">TinEye API</a>
+            <a href="https://services.tineye.com/WineEngine">WineEngine</a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2 technology-menu">
+          <div>
+            <h5>WHAT WE DO</h5>
+            <a href="https://www.tineye.com/technology">Our technology</a>
+            <a href="https://labs.tineye.com/">TinEye Labs</a>
+
+            <h5 class="developers">DEVELOPERS</h5>
+            <a href="https://services.tineye.com/docs">Documentation</a>
+            <a href="https://help.tineye.com/">Help center</a>
+            <a href="https://services.tineye.com/support">Support</a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2 company-menu">
+          <div>
+            <h5>COMPANY</h5>
+            <a href="https://www.tineye.com/about">About TinEye</a>
+            <a href="https://www.tineye.com/clients">Our clients</a>
+            <a href="https://www.tineye.com/about#careers">Careers</a>
+            <a href="https://www.tineye.com/press">Press</a>
+            <a href="http://blog.tineye.com/">Blog</a>
+          </div>
+        </div>
+      </div>
+      <div class="row copyright">
+        <div class="col-xs-12 col-sm-6">© 2019 TinEye<span>·</span>Made with <img src="./slideshow5_files/heart.png" width="17" height="14" alt="love" class="heart"> in Canada</div>
+        <div class="col-xs-12 col-sm-6 contact-menu"><a href="https://www.tineye.com/terms">Legal</a><span>·</span><a href="https://services.tineye.com/contact">Contact us</a></div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2430070-8', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe src="./slideshow5_files/anchor.html" width="256" height="60" role="presentation" name="a-9r9ckvoulp3g" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div></body></html>
