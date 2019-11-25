@@ -115,9 +115,8 @@ body{
   <center><img src="images/ship.svg" height="300px" alt="Avocadoes"></center>
 </div>
 
-
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#airplane-modal">
+<div id="airplane-popup">
+<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#airplane-modal">
     Click for more info.
   </button>
 
@@ -125,7 +124,7 @@ body{
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Airplane Transportation</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -141,15 +140,62 @@ body{
       </div>
     </div>
   </div>
+</div>
 
+<div id="Truck-popup">
+<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#truck-modal">
+    Click for more info.
+  </button>
 
-  <div class="popup2" onclick="myFunction()">Click for more info!
-    <span class="popuptext" id="myPopup"> </span>
-  </div>
-  <div class="popup3" onclick="myFunction()">Click for more info!
-    <span class="popuptext" id="myPopup"> </span>
+    <div class="modal fade" id="truck-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Truck Transportation</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <p>Modal body text goes here.</p>
+                </div>
+              </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+<div id="Ship-popup">
+<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#ship-modal">
+    Click for more info.
+  </button>
+
+    <div class="modal fade" id="ship-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ship Transportation</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <p>Modal body text goes here.</p>
+                </div>
+              </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <br></br>
 
