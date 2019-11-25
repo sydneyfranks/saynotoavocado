@@ -1,0 +1,45 @@
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+body {
+  background-image: url("img_tree.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+h1 {
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+
+}
+
+p {
+      width: 90%;
+      margin: 5vh 5vw;
+      font-size: 1em;
+      color: white;
+      text-align: left;
+
+  }
+
+  div {
+          min-height: 100vh;
+          width: 100vw;
+
+    }
+ a {
+   color: pink;
+
+ }

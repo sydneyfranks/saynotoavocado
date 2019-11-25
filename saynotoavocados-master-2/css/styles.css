@@ -49,12 +49,6 @@ font-size: 4.1em;
 transition: 0.6s ease;
 }
 
-p.info, div.i_h_wrapper{
-  width: 33%;
-  padding-left: 1em;
-  padding-right: 1em;
-  text-align: center;
-}
 
 div#n2-ss-15 .n2-ss-slide{
 	border:10px solid white;
@@ -63,7 +57,6 @@ div#n2-ss-15 .n2-ss-slide{
 
 div.image-wraper {
   display:flex;
-  width: 100%;
   flex-direction: row;
   justify-content: space-around;
 }
@@ -80,24 +73,9 @@ div#n2-ss-15 .n2-ss-slide{
     transition: 0.6s ease;
 
 }
-img#thumb{
-    margin-left: auto;
-    margin-right: auto;
-}
+
 #thumb:hover {
     transform: rotate(180deg);
     transition: 0.6s ease;
-}
-div.slide{
-    margin-left: auto;
-    margin-right: auto;
-}
-div.popupboxes {
-  width: 100%;
-  display: flex;
-  align-items:center;
-  flex-direction: row;
-  justify-content: space-around;
-
 }
 /* Start http://www.cursors-4u.com */ * {cursor: url(http://cur.cursors-4u.net/others/oth-7/oth705.cur), auto !important;} /* End http://www.cursors-4u.com */
