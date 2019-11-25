@@ -17,6 +17,7 @@ body {
   background-image: url("img_tree.gif");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  color: white;
 }
 h1 {
   font-size: 4rem;
@@ -29,17 +30,21 @@ p {
       width: 90%;
       margin: 5vh 5vw;
       font-size: 1em;
-      color: white;
       text-align: left;
 
   }
 
   div {
-          min-height: 100vh;
+          min-height: 50vh;
           width: 100vw;
 
     }
  a {
    color: pink;
+}
 
- }
+home { position= "fixed"
+      padding: 3rem 1.5rem;
+      margin: 5vh 5vw;
+
+}
