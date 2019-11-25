@@ -1,5 +1,5 @@
 body {
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 .starter-template {
   padding: 3rem 1.5rem;
@@ -28,14 +28,14 @@ h1 {
 
 p {
       width: 90%;
-      margin: 5vh 5vw;
+      margin: 2vh 5vw;
       font-size: 1em;
       text-align: left;
 
   }
 
   div {
-          min-height: 50vh;
+          min-height: 5vh;
           width: 100vw;
 
     }
@@ -43,8 +43,9 @@ p {
    color: pink;
 }
 
-home { position= "fixed"
-      padding: 3rem 1.5rem;
-      margin: 5vh 5vw;
-
+#homebutton {
+    margin: 2vh 2vw;
 }
+ br {
+
+ }
