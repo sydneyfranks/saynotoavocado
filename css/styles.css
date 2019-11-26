@@ -124,8 +124,7 @@ div.popup{
   width: 33%;
   text-align: center;
 }
-  #click-for-more {
-    display: flex;
+btn.#click-for-more {
     align-items: center;
     display: inline-block;
   }
