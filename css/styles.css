@@ -124,10 +124,9 @@ div.popup{
   width: 33%;
   text-align: center;
 }
-h5#exampleModalLabel.modal-title {
+h5#modal-title {
   color: black;
 }
-
 modal-body{
     color: black;
     font-size: 15px;
