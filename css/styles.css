@@ -103,10 +103,10 @@ div.slide{
     margin-left: auto;
     margin-right: auto;
 }
-modal-header {
+h5#modal-title {
   color: black;
 }
-modal-body {
+p#modal-body {
     color: black;
     font-size: 15px;
 }
