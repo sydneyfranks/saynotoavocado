@@ -111,7 +111,7 @@ modal-body {
     font-size: 15px;
 }
 click-for-more {
-  align-items: center;
+  display: inline-block;
 }
 a{
   color: pink;
