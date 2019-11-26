@@ -127,11 +127,12 @@ div.popup{
 h5#modal-title {
   color: black;
 }
-modal-body {
+modal-body{
     color: black;
     font-size: 15px;
 }
-btn.click-for-more {
+
+div.click-for-more {
   display: inline-block;
 a{
   color: pink;
