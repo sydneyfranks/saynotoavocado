@@ -200,6 +200,7 @@ a{
     padding: 14px 20px;
     background-color: red;
   }
+<<<<<<< HEAD
 
   .signupbtn {
     padding: 14px 20px;
@@ -227,4 +228,68 @@ a{
   @media screen and (max-width: 300px) {
     .cancelbtn, .signupbtn {
       width: 100%;
+}
+
+
+
+ol {
+
+    list-style: none;
+    color: yellow;
+    text-shadow: -0.5px -0.5px 0 #21004d, 0.5px -0.5px 0 #21004d, -0.5px 0.5px 0 #21004d, 0.5px 0.5px 0 #21004d;
+    padding: 0;
+    margin-bottom: 10%;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+li#lower {
+
+    margin-top: 4%;
+
+}
+li#lowest {
+
+    margin-top: 8%;
+
+}
+
+
+li {
+    margin: 0 20px
+    transition: 1s ease;
+}
+li:hover {
+    font-size: 1.1em;
+    transition: 0.9s ease;
+=======
+
+  .signupbtn {
+    padding: 14px 20px;
+    background-color: green;
+  }
+
+  .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+  }
+
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+      width: 100%;
+>>>>>>> ca0ae25b75f601cb8b144a965bec2d944282b6c0
 }
