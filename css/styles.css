@@ -110,7 +110,7 @@ modal-body {
     color: black;
     font-size: 15px;
 }
-click-for-more {
+btn.click-for-more {
   display: inline-block;
 }
 a{
