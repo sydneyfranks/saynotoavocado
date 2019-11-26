@@ -129,96 +129,6 @@ li:hover {
 
 }
 
-div#n2-ss-15 .n2-ss-slide{
-	box-shadow: 0px 0px 10px 2px #7f7f7f;
-}
-img#growth_pic{
-  border-radius: 1em;
-}
-
-#avocadopic:hover {
-    transform: rotate(180deg);
-    transition: 0.6s ease;
-
-}
-img#thumb{
-    margin-left: auto;
-    margin-right: auto;
-}
-#thumb:hover {
-    transform: rotate(360deg);
-    transition: 2s ease;
-}
-div.slide{
-    margin-left: auto;
-    margin-right: auto;
-}
-div.popupboxes {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-div.popup{
-  width: 33%;
-  text-align: center;
-}
-btn.#click-for-more {
-    align-items: center;
-    display: inline-block;
-  }
-
-
-h5#modal-title {
-  color: black;
-}
-modal-body{
-    color: black;
-    font-size: 15px;
-}
-
-div.click-for-more {
-  display: inline-block;
-
-a {
-  color: pink;
-}
-/* Start http://www.cursors-4u.com */ * {cursor: url(http://cur.cursors-4u.net/others/oth-7/oth705.cur), auto !important;} /* End http://www.cursors-4u.com */
-
-
-
-/* Responsive website */
-
-@media only screen and (max-width: 768px) {
-  #avocadopic{
-    width: 50%;
-    height: auto;
-  }
-  h1.display-1{
-    font-size: 2em;
-  }
-  div.i_h_wrapper h1{
-    font-size: 1em;
-  }
-  p.info{
-    font-size: 0.8em;
-  }
-  div.info-block-wrapper{
-    display: block;
-  }
-  div.infoblock{
-    width: 100%;
-  }
-  div.col-sm{
-    width: 100%;
-  }
-  div.col-sm img{
-    width: 50%;
-  }
-  div.col-sm img#growth_pic{
-    width: 100%;
-    height: auto;
-  }
-
 
   {box-sizing: border-box}
 
@@ -306,3 +216,91 @@ a {
       width: 100%;
 
 }
+
+div#n2-ss-15 .n2-ss-slide{
+	box-shadow: 0px 0px 10px 2px #7f7f7f;
+}
+img#growth_pic{
+  border-radius: 1em;
+}
+
+#avocadopic:hover {
+    transform: rotate(180deg);
+    transition: 0.6s ease;
+
+}
+img#thumb{
+    margin-left: auto;
+    margin-right: auto;
+}
+#thumb:hover {
+    transform: rotate(360deg);
+    transition: 2s ease;
+}
+div.slide{
+    margin-left: auto;
+    margin-right: auto;
+}
+div.popupboxes {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+div.popup{
+  width: 33%;
+  text-align: center;
+}
+btn.#click-for-more {
+    align-items: center;
+    display: inline-block;
+  }
+
+
+h5#modal-title {
+  color: black;
+}
+modal-body{
+    color: black;
+    font-size: 15px;
+}
+
+div.click-for-more {
+  display: inline-block;
+
+
+/* Start http://www.cursors-4u.com */ * {cursor: url(http://cur.cursors-4u.net/others/oth-7/oth705.cur), auto !important;} /* End http://www.cursors-4u.com */
+
+
+
+/* Responsive website */
+
+@media only screen and (max-width: 768px) {
+  #avocadopic{
+    width: 50%;
+    height: auto;
+  }
+  h1.display-1{
+    font-size: 2em;
+  }
+  div.i_h_wrapper h1{
+    font-size: 1em;
+  }
+  p.info{
+    font-size: 0.8em;
+  }
+  div.info-block-wrapper{
+    display: block;
+  }
+  div.infoblock{
+    width: 100%;
+  }
+  div.col-sm{
+    width: 100%;
+  }
+  div.col-sm img{
+    width: 50%;
+  }
+  div.col-sm img#growth_pic{
+    width: 100%;
+    height: auto;
+  }
