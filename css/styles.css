@@ -85,15 +85,20 @@ div#n2-ss-15 .n2-ss-slide{
 	box-sizing:border-box!important;
 }
 
-div.image-wraper {
+div.image-wraper{
   display:flex;
   width: 100%;
   flex-direction: row;
   justify-content: space-around;
 }
-div.image-wraper img{
+div.image-wraper.three img{
   width: 300px
   max-width: 33%;
+  height:auto;
+}
+div.image-wraper.four img{
+  width: 300px
+  max-width: 25%;
   height:auto;
 }
 
