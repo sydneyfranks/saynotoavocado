@@ -7,7 +7,7 @@
     <meta name="author" content="">
       <title>Say No To Avocado</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-      <link rel="stylesheet" href="/css/master.css">
+      <link rel="stylesheet" href="css/styles.css">
       <link href="css/styles.css" rel="stylesheet">
       <style>
         body{
@@ -33,6 +33,8 @@
             <h5 class="text-white h5"> <a href=#wateruse> water usage</a></h5>
             <h5 class="text-white h5"> <a href=#cartels> cartels</a></h5>
             <h5 class="text-white h5"> <a href=#photo> images</a></h5>
+            <h5 class="text-white h5"> <a href=#getinvolved> your turn</a></h5>
+            <h5 class="text-white h5"> <a href=#signup> sign up</a></h5>
             <h5 class="text-white h5"> <a href="about_us.html"> about the authors</h5> </a>
           </div>
         </div>
@@ -92,38 +94,40 @@
               and Peru. </div>
           </div>
         <br></br>
-            <div class="image-wraper">
+
+<div class="image-wraper">
               <center><img src="images/airplane.svg" height="300px" alt="Avocadoes"></center>
               <center><img src="images/truck.svg" height="300px" alt="Avocadoes"></center>
               <center><img src="images/ship.svg" height="300px" alt="Avocadoes"></center>
             </div>
-        <div id: "airplane modal">
-          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
-            Click for more info.
-          </button>
-            <div class="modal" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Airplane Transportation</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>A single journey by air from Mexico City to Edinburgh has a carbon footprint of 3.36 metric tons of CO2</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-dark">Close</button>
-                </div>
+
+<div id="click-for-more">
+      <div id: "airplane modal">
+        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
+          Air transport
+        </button>
+          <div class="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Airplane Transportation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>A single journey by air from Mexico City to Edinburgh has a carbon footprint of 3.36 metric tons of CO2</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark">Close</button>
               </div>
             </div>
           </div>
         </div>
-<div class="click-for-more">
+      </div>
       <div id="Truck-popup">
         <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#truck-modal">
-            Click for more info.
+            Van Transport
           </button>
 
             <div class="modal fade" id="truck-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -136,7 +140,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                      <p>Modal body text goes here.</p>
+                      <p>A journey from Michochan region to Mexico City by Van is 0.07 metric tons of CO2e</p>
                         </div>
                       </div>
                   <div class="modal-footer">
@@ -150,7 +154,7 @@
 
     <div id="Ship-popup">
         <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#ship-modal">
-            Click for more info.
+            Ship Transport
           </button>
             <div class="modal fade" id="ship-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
@@ -162,7 +166,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                      <p>Modal body text goes here.</p>
+                      <p>A single journey by ship from Mexico City to Edinburgh has a carbon footprint of 2.83 metric tons of CO2e</p>
                         </div>
                       </div>
                   <div class="modal-footer">
@@ -237,9 +241,26 @@
                   </a>
                 </div>
             <br></br><br></br>
-            <form action="action_page.php" style="border:1px solid #ccc">
+            <br></br><br></br><br>
+              <h2 id= "getinvolved"> So what can you do to help?</h2>
+                <div> Of course eating avocados doesn't make you a bad person. However, it is good to be
+                aware of the environmental repurcussions that eating a lot of avocados can have and be mindful
+                of your consumption. Every small step counts! Some easy ways to make a small difference include:
+              </div><br></br>
+
+                <ol>
+                    <li> reducing your overall avocado consumption </li>
+                    <li id="lower"> only eating avocados when they are in season </li>
+                    <li id="lowest"> not throwing avocados away and reducing food waste </li>
+                  </ol>
+                  </div>
+                </div>
+
+
+          <br></br><br></br>
+            <form id="signup" action="action_page.php" style="border:1px solid #ccc">
       <div class="container">
-        <h1>Sign Up</h1>
+        <h4>Sign Up</h4>
         <p>Are you convinced that we need to work together to put an end to avocado
           consumption? Please fill in this form to sign up for our totally
           real newsletter.</p>
@@ -268,7 +289,6 @@
     </form>
   <br></br><br></br>
 
-  <center><img src="images/thumb.svg" height="300px" alt="Avocadoes" > </center>
 
 
       <!-- Add another row here -->
