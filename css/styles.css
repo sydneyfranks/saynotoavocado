@@ -176,3 +176,38 @@ hr {
     width: 100%;
   }
 }
+
+
+
+ol {
+
+    list-style: none;
+    color: yellow;
+    text-shadow: -0.5px -0.5px 0 #21004d, 0.5px -0.5px 0 #21004d, -0.5px 0.5px 0 #21004d, 0.5px 0.5px 0 #21004d;
+    padding: 0;
+    margin-bottom: 10%;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+li#lower {
+
+    margin-top: 4%;
+
+}
+li#lowest {
+
+    margin-top: 8%;
+
+}
+
+
+li {
+    margin: 0 20px
+    transition: 1s ease;
+}
+li:hover {
+    font-size: 1.1em;
+    transition: 0.9s ease;
+}
