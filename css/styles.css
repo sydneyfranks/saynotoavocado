@@ -299,3 +299,6 @@ div.click-for-more {
       display: table;
     }
 }
+a {
+  color: pink;
+}
