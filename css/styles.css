@@ -103,14 +103,15 @@ div.slide{
     margin-left: auto;
     margin-right: auto;
 }
-h5#modal-title {
+h5#modal-title{
   color: black;
 }
-modal-body {
+modal-body{
     color: black;
     font-size: 15px;
 }
-btn.click-for-more {
+
+div.click-for-more {
   display: inline-block;
 }
 a{
