@@ -39,11 +39,10 @@ div.box{
   display: flex;
   justify-content: space-around;
 }
-div.contrast h1{
-  color: rgb(252, 255, 64);
 
+div.avocadopic{
+  width: 100%;
 }
-
 h1 {
 margin: 0 20px;
 transition: 0.6s ease;
@@ -57,13 +56,21 @@ h2 {
   font-size: 50px;
   color: yellow;
 }
-
-p.info, div.i_h_wrapper{
+div.info-block-wrapper{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+div.info-block-wrapper h1{
+  color: rgb(252, 255, 64);
+}
+div.infoblock{
   width: 33%;
-  padding-left: 1em;
-  padding-right: 1em;
+  flex: 1 1 0;
+}
+
+p.info, div.i_h_wrapper h1{
   text-align: center;
-  margin: auto;
 }
 
 div#n2-ss-15 .n2-ss-slide{
@@ -76,6 +83,11 @@ div.image-wraper {
   width: 100%;
   flex-direction: row;
   justify-content: space-around;
+}
+div.image-wraper img{
+  width: 300px
+  max-width: 33%;
+  height:auto;
 }
 
 
@@ -103,78 +115,118 @@ div.slide{
     margin-left: auto;
     margin-right: auto;
 }
+div.popupboxes {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+div.popup{
+  width: 33%;
+  text-align: center;
+}
 h5#modal-title {
   color: black;
 }
-modal-body {
+modal-body{
     color: black;
     font-size: 15px;
 }
-btn.click-for-more {
+
+div.click-for-more {
   display: inline-block;
-}
 a{
   color: pink;
 }
 /* Start http://www.cursors-4u.com */ * {cursor: url(http://cur.cursors-4u.net/others/oth-7/oth705.cur), auto !important;} /* End http://www.cursors-4u.com */
 
-{box-sizing: border-box}
+/* Responsive website */
 
-
-  input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-
-
-
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: red;
-}
-
-.signupbtn {
-  padding: 14px 20px;
-  background-color: green;
-}
-
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
-
-/* Add padding to container elements */
-.container {
-  padding: 16px;
-}
-
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
+@media only screen and (max-width: 768px) {
+  #avocadopic{
+    width: 50%;
+    height: auto;
+  }
+  h1.display-1{
+    font-size: 2em;
+  }
+  div.i_h_wrapper h1{
+    font-size: 1em;
+  }
+  p.info{
+    font-size: 0.8em;
+  }
+  div.info-block-wrapper{
+    display: block;
+  }
+  div.infoblock{
     width: 100%;
   }
+  div.col-sm{
+    width: 100%;
+  }
+  div.col-sm img{
+    width: 50%;
+  }
+  div.col-sm img#growth_pic{
+    width: 100%;
+    height: auto;
+  }
+  {box-sizing: border-box}
+
+
+    input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+
+
+
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: red;
+  }
+
+  .signupbtn {
+    padding: 14px 20px;
+    background-color: green;
+  }
+
+  .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+  }
+
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+      width: 100%;
 }
 
 
