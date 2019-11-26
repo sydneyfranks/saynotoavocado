@@ -110,6 +110,9 @@ modal-body {
     color: black;
     font-size: 15px;
 }
+click-for-more {
+  align-items: center;
+}
 a{
   color: pink;
 }
