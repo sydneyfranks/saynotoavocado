@@ -108,6 +108,7 @@ modal-header {
 }
 modal-body {
     color: black;
+    font-size: 15px;
 }
 a{
   color: pink;
