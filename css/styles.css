@@ -106,7 +106,7 @@ div.slide{
 h5#modal-title {
   color: black;
 }
-p#modal-body {
+p.modal-body {
     color: black;
     font-size: 15px;
 }
