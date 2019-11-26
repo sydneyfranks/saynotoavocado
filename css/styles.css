@@ -1,3 +1,7 @@
+
+
+
+
 body {
   padding-top: 5rem;
 }
@@ -56,6 +60,9 @@ h2 {
   font-size: 50px;
   color: yellow;
 }
+
+
+
 div.info-block-wrapper{
   display: flex;
   flex-direction: row;
@@ -90,6 +97,37 @@ div.image-wraper img{
   height:auto;
 }
 
+
+ol {
+    list-style: none;
+    color: yellow;
+    padding: 0;
+    margin-bottom: 10%;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-evenly;
+}
+li#lower {
+
+    margin-top: 4%;
+
+}
+li#lowest {
+
+    margin-top: 8%;
+
+}
+
+
+li {
+    margin: 0 20px
+    transition: 1s ease;
+}
+li:hover {
+    font-size: 1.1em;
+    transition: 0.9s ease;
+
+}
 
 div#n2-ss-15 .n2-ss-slide{
 	box-shadow: 0px 0px 10px 2px #7f7f7f;
@@ -139,6 +177,8 @@ a{
 }
 /* Start http://www.cursors-4u.com */ * {cursor: url(http://cur.cursors-4u.net/others/oth-7/oth705.cur), auto !important;} /* End http://www.cursors-4u.com */
 
+
+
 /* Responsive website */
 
 @media only screen and (max-width: 768px) {
@@ -171,6 +211,8 @@ a{
     width: 100%;
     height: auto;
   }
+
+
   {box-sizing: border-box}
 
 
@@ -193,14 +235,11 @@ a{
     margin-bottom: 25px;
   }
 
-
-
-
   .cancelbtn {
     padding: 14px 20px;
     background-color: red;
   }
-<<<<<<< HEAD
+
 
   .signupbtn {
     padding: 14px 20px;
@@ -232,39 +271,6 @@ a{
 
 
 
-ol {
-
-    list-style: none;
-    color: yellow;
-    text-shadow: -0.5px -0.5px 0 #21004d, 0.5px -0.5px 0 #21004d, -0.5px 0.5px 0 #21004d, 0.5px 0.5px 0 #21004d;
-    padding: 0;
-    margin-bottom: 10%;
-    font-size: 0.8em;
-    display: flex;
-    justify-content: space-evenly;
-
-}
-li#lower {
-
-    margin-top: 4%;
-
-}
-li#lowest {
-
-    margin-top: 8%;
-
-}
-
-
-li {
-    margin: 0 20px
-    transition: 1s ease;
-}
-li:hover {
-    font-size: 1.1em;
-    transition: 0.9s ease;
-=======
-
   .signupbtn {
     padding: 14px 20px;
     background-color: green;
@@ -291,5 +297,5 @@ li:hover {
   @media screen and (max-width: 300px) {
     .cancelbtn, .signupbtn {
       width: 100%;
->>>>>>> ca0ae25b75f601cb8b144a965bec2d944282b6c0
+
 }
