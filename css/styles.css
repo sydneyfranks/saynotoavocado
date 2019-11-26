@@ -104,7 +104,10 @@ div.slide{
     margin-left: auto;
     margin-right: auto;
 }
-div.modal-body {
+modal-title {
+  color: black;
+}
+modal-body {
     color: black;
 }
 a{
