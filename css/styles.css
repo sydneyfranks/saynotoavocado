@@ -124,6 +124,13 @@ div.popup{
   width: 33%;
   text-align: center;
 }
+  #click-for-more {
+    display: flex;
+    align-items: center;
+    display: inline-block;
+  }
+
+
 h5#modal-title {
   color: black;
 }
@@ -134,7 +141,8 @@ modal-body{
 
 div.click-for-more {
   display: inline-block;
-a{
+
+a {
   color: pink;
 }
 /* Start http://www.cursors-4u.com */ * {cursor: url(http://cur.cursors-4u.net/others/oth-7/oth705.cur), auto !important;} /* End http://www.cursors-4u.com */
